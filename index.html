@@ -88,7 +88,7 @@
 					transparent: true
 				}
 			);
-			map.addLayer(layerPOAF);
+			map.addLayer(layerPGMF);
 			layerPGMF.setVisibility(false);
 
 			// Planes Operativos Anuales Forestales WMS local 
@@ -100,8 +100,8 @@
 					transparent: true
 				}
 			);
-			map.addLayer(layerPOP);
-			layerPOP.setVisibility(false);
+			map.addLayer(layerPOAF);
+			layerPOAF.setVisibility(false);
 
 			// Planes de Ordenamiento Predial WMS local  
 			var layerPOP = new OpenLayers.Layer.WMS(
@@ -112,8 +112,8 @@
 					transparent: true
 				}
 			);
-			map.addLayer(layerPROVBIO);
-			layerPROVBIO.setVisibility(false);
+			map.addLayer(layerPOP);
+			layerPOP.setVisibility(false);
 
 			// Provincias Biogeograficas  
 			var layerPROVBIO = new OpenLayers.Layer.WMS(
@@ -124,8 +124,8 @@
 					transparent: true
 				}
 			);
-			map.addLayer(layerPresas);
-			layerPresas.setVisibility(false);
+			map.addLayer(layerPROVBIO);
+			layerPROVBIO.setVisibility(false);
 
 			var layerJson = new OpenLayers.Layer.Vector(
 				"Capa Uyuni-json",
