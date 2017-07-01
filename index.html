@@ -80,28 +80,52 @@
 			map.addLayer(layerDepartamentosWMS);
 
 			// Layer WMS desde geoserver Local
-			var layerEolico = new OpenLayers.Layer.WMS(
-				"Mapa Eólico",
+			var layerPGMF = new OpenLayers.Layer.WMS(
+				"Planes de Manejo Forestal",
 				"http://192.168.1.155:8080/geoserver/wms",
 				{
 					layers: 'cursosigLPV:B0603201_PGMF_A2016',
 					transparent: true
 				}
 			);
-			map.addLayer(layerEolico);
-			layerEolico.setVisibility(false);
+			map.addLayer(layerPGMF);
+			layerPGMF.setVisibility(false);
 
-			// Capa Presas 2010  
-			var layerPresas = new OpenLayers.Layer.WMS(
-				"Mapa de Represas",
+			// Planes Operativos Anuales Forestales WMS local 
+			var layerPOAF = new OpenLayers.Layer.WMS(
+				"Planes Operativos Anuales Forestales",
 				"http://192.168.1.155:8080/geoserver/wms",
 				{
-					layers: 'curso-gis:Presas2010',
+					layers: 'cursosigLPV:B0603205_POAF_2013A022017',
 					transparent: true
 				}
 			);
-			map.addLayer(layerPresas);
-			layerPresas.setVisibility(false);
+			map.addLayer(layerPGMF);
+			layerPOAF.setVisibility(false);
+
+			// Planes de Ordenamiento Predial WMS local  
+			var layerPOP = new OpenLayers.Layer.WMS(
+				"Planes de Ordenamiento Predial",
+				"http://192.168.1.155:8080/geoserver/wms",
+				{
+					layers: 'cursosigLPV:B0603202_POP_2013A2016',
+					transparent: true
+				}
+			);
+			map.addLayer(layerPOP);
+			layerPOP.setVisibility(false);
+
+			// Provincias Biogeograficas  
+			var layerPROVBIO = new OpenLayers.Layer.WMS(
+				"Provincias Biogeograficas",
+				"http://192.168.1.155:8080/geoserver/wms",
+				{
+					layers: 'cursosigLPV:ProvinciasBiogeograficas_A2009',
+					transparent: true
+				}
+			);
+			map.addLayer(layerPROVBIO);
+			layerPROVBIO.setVisibility(false);
 
 			var layerJson = new OpenLayers.Layer.Vector(
 				"Capa Uyuni-json",
