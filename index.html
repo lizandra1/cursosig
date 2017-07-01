@@ -82,9 +82,9 @@
 			// Layer WMS desde geoserver Local
 			var layerEolico = new OpenLayers.Layer.WMS(
 				"Mapa Eólico",
-				"http://192.168.56.101:8080/geoserver/wms",
+				"http://192.168.1.155:8080/geoserver/wms",
 				{
-					layers: 'curso-gis:EOLICO',
+					layers: 'cursosigLPV:B0603201_PGMF_A2016',
 					transparent: true
 				}
 			);
@@ -94,7 +94,7 @@
 			// Capa Presas 2010  
 			var layerPresas = new OpenLayers.Layer.WMS(
 				"Mapa de Represas",
-				"http://192.168.56.101:8080/geoserver/wms",
+				"http://192.168.1.155:8080/geoserver/wms",
 				{
 					layers: 'curso-gis:Presas2010',
 					transparent: true
